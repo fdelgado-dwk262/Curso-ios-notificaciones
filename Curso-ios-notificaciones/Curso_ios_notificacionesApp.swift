@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Curso_ios_notificacionesApp: App {
+    // instanciamos para paraserlo a la vista
+    @State private var manager = NotificationManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VistaPrincipal()
+                .environment(manager)
         }
     }
 }
